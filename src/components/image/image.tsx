@@ -18,15 +18,10 @@ export const Image: React.FC<ImageProps> = ({ width, height, alt, ...props }) =>
     <>
       <style jsx global>{`
         [data-lazy-fade]:not([data-lazy-fade="complete"]) {
-          opacity: 0;
+          opacity: 0 !important;
         }
         [data-lazy-fade="complete"] {
-          transition: opacity 0.5s ease;
-        }
-        @supports (font: -apple-system-body) and (-webkit-appearance: none) {
-          img[loading="lazy"] {
-            clip-path: inset(0.6px);
-          }
+          transition: opacity 0.5s ease !important;
         }
       `}</style>
       <NextImage
